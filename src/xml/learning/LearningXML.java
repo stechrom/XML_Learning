@@ -7,6 +7,8 @@ package xml.learning;
 public class LearningXML {
 
     public static void main(String[] args) {
+
         System.out.println("Let's start learning XML and XSD");
+        System.out.println("Enter dev branch for the start");
     }
 }
