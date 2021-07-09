@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.bharaththippireddy.org/Trainee"
+            xmlns:my_ns="http://www.bharaththippireddy.org/Trainee"
+            elementFormDefault="qualified">
+
+    <element name="Trainee" type="my_ns:Trainee"/>
+
+    <complexType name="Trainee">
+        <sequence>
+            <element name="Name" type="string"/>
+            <element name="Surname" type="string"/>
+            <element name="Age" type="positiveInteger"/>
+            <element name="Email" type="string"/>
+            <element name="Is.male" type="boolean"/>
+        </sequence>
+    </complexType>
+
+</schema>

@@ -1,0 +1,7 @@
+<tra:Trainee xmlns:tra="http://www.bharaththippireddy.org/Trainee">
+  <tra:Name>Roman</tra:Name>
+  <tra:Surname>????</tra:Surname>
+  <tra:Age>35</tra:Age>
+  <tra:Email>someemail@gmail.com</tra:Email>
+  <tra:Is.male>true</tra:Is.male>
+</tra:Trainee>

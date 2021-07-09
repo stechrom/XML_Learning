@@ -10,5 +10,6 @@ public class LearningXML {
 
         System.out.println("Let's start learning XML and XSD");
         System.out.println("Enter dev branch for the start");
+        System.out.println("file my_xml.xml.xml created in the project");
     }
 }

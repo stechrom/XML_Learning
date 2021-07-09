@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Author: Roman Stechkevych -->
+<XML.file.body>
+    <Greeting>&quot;The first XML file created&quot;</Greeting>
+    <![CDATA["<&>this block is ignored by it cannot be nested inside another similar block<&>"]]>
+    <Author status="learning"/>
+    <Author.information>
+        <ID>stechrom</ID>
+        <General.info>Learning Java and other related frameworks.</General.info>
+        <Company>TietoEvry</Company>
+        <Experience>14 years</Experience>
+    </Author.information>
+</XML.file.body>
