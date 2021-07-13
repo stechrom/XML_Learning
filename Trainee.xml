@@ -1,7 +1,18 @@
-<tra:Trainee xmlns:tra="http://www.bharaththippireddy.org/Trainee">
-  <tra:Name>Roman</tra:Name>
-  <tra:Surname>????</tra:Surname>
-  <tra:Age>35</tra:Age>
-  <tra:Email>someemail@gmail.com</tra:Email>
-  <tra:Is.male>true</tra:Is.male>
-</tra:Trainee>
+<tra_ns:Trainee xmlns:tra_ns="http://www.bharaththippireddy.org/Trainee.xsd"
+                xmlns:pj_ns="http://www.bharaththippireddy.org/projects.xsd"
+               excel_row="6553">
+  <tra_ns:name>Roman</tra_ns:name>
+  <tra_ns:surname>Stechkevych</tra_ns:surname>
+  <tra_ns:age>35</tra_ns:age>
+  <tra_ns:email>someemail@gmail.com</tra_ns:email>
+  <tra_ns:gender>Male</tra_ns:gender>
+  <tra_ns:experience>14</tra_ns:experience>
+  <tra_ns:projects>
+    <pj_ns:duration>13</pj_ns:duration>
+    <pj_ns:project_name>Ericsson</pj_ns:project_name>
+  </tra_ns:projects>
+  <tra_ns:projects>
+    <pj_ns:project_name>Mavenir</pj_ns:project_name>
+    <pj_ns:duration>1</pj_ns:duration>
+  </tra_ns:projects>
+</tra_ns:Trainee>

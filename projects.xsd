@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.bharaththippireddy.org/projects.xsd"
+        xmlns:pj_ns="http://www.bharaththippireddy.org/projects.xsd"
+        xmlns:my_ns="http://www.bharaththippireddy.org/Trainee.xsd"
+        elementFormDefault="qualified">
+
+    <import schemaLocation="Trainee.xsd"
+            namespace="http://www.bharaththippireddy.org/Trainee.xsd"/>
+
+    <complexType name="Projects">
+        <all>
+            <element name="project_name" type="pj_ns:ProjectNames"/>
+            <element name="duration" type="pj_ns:Duration"/>
+        </all>
+    </complexType>
+
+        <simpleType name="ProjectNames">
+            <restriction base="string">
+                <enumeration value="Ericsson"/>
+                <enumeration value="Mavenir"/>
+            </restriction>
+        </simpleType>
+
+        <simpleType name="Duration">
+            <restriction base="my_ns:Experience"/>
+        </simpleType>
+
+</schema>

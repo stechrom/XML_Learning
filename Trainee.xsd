@@ -1,20 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="http://www.bharaththippireddy.org/Trainee"
-            xmlns:my_ns="http://www.bharaththippireddy.org/Trainee"
+            targetNamespace="http://www.bharaththippireddy.org/Trainee.xsd"
+            xmlns:my_ns="http://www.bharaththippireddy.org/Trainee.xsd"
+            xmlns:pj_ns="http://www.bharaththippireddy.org/projects.xsd"
             elementFormDefault="qualified">
+
+    <!--include schemaLocation="projects.xsd"/-->
+    <import schemaLocation="projects.xsd"
+            namespace="http://www.bharaththippireddy.org/projects.xsd"/>
 
     <element name="Trainee" type="my_ns:Trainee"/>
 
-    <complexType name="Trainee">
-        <sequence>
-            <element name="Name" type="string"/>
-            <element name="Surname" type="string"/>
-            <element name="Age" type="positiveInteger"/>
-            <element name="Email" type="string"/>
-            <element name="Is.male" type="boolean"/>
-        </sequence>
-    </complexType>
+        <complexType name="Trainee">
+            <sequence>
+                <element name="name" type="my_ns:ID"/>
+                <element name="surname" type="my_ns:ID"/>
+                <element name="age" type="positiveInteger"/>
+                <element name="email" type="string" minOccurs="0"/>
+                <element name="gender" type="my_ns:Gender"/>
+                <element name="experience" type="my_ns:Experience"/>
+                <element name="projects" type="pj_ns:Projects" maxOccurs="2"/>
+            </sequence>
+
+            <attribute name="excel_row" type="my_ns:excelID" use="required"/>
+
+        </complexType>
+
+            <simpleType name="ID">
+                <restriction base="string">
+                    <maxLength value="15"/>
+                </restriction>
+            </simpleType>
+
+            <simpleType name="Gender">
+                <restriction base="string">
+                    <enumeration value="Male"/>
+                    <enumeration value="Female"/>
+                </restriction>
+            </simpleType>
+
+            <simpleType name="Experience">
+                <restriction base="positiveInteger">
+                    <minInclusive value="1"/>
+                    <maxInclusive value="14"/>
+                </restriction>
+            </simpleType>
+
+            <simpleType name="excelID">
+                <restriction base="int">
+                    <pattern value="[0-9]{4}"/>
+                </restriction>
+            </simpleType>
 
 </schema>
